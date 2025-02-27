@@ -107,3 +107,37 @@
 - x축 기준 gutter는 column를 감싸는 row에서 `gx-num`으로 설정(padding)
 - y축 기준 gutter는 column를 감싸는 row에서 `gy-num`으로 설정(margin)
 - `g-num`로 설정하면 x, y축 모두 gutter 설정 가능
+
+# 반응형 웹 디자인(Responsive Web Design)
+> 디바이스 종류나 화면 크기에 상관없이, 어디서든 일관된 레이아웃 및 사용자 경험을 제공하는 디자인 기술
+
+## Grid system breakpoints
+> 웹 페이지를 다양한 화면 크기에서 적잘하게 배치하기 위한 분기점
+```html
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-sm-6 col-md-2 col-lg-3 col-xl-4">
+        <div class="box">col</div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-8 col-lg-3 col-xl-4">
+        <div class="box">col</div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-2 col-lg-3 col-xl-4">
+        <div class="box">col</div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-12 col-lg-3 col-xl-12">
+        <div class="box">col</div>
+      </div>
+    </div>
+  </div>
+```
+- Bootstrap grid system에서는 12개 column과 6개 breakpoints를 사용하여 반응형 웹 디자인을 구현한다.
+- 화면 너비에 따라 6개의 분기점을 제공한다.
+- `xs`, `sm`, `md`, `lg`, `xl`, `xxl`
+- `col-size-num`, `xs`은 기본값으로 size를 작성하지 않으면 `xs`이다.
+- 각 breakpoints 마다 설정된 최대 너비 값 **이상으로** 화면이 커지면 grid system 동작이 변경된다.
+
+### CSS Layout 종합 정리
+- CSS 레이아웃 기술들은 각각 고유한 특성과 장단점을 가지고 있다.
+- 이들은 상호 보완적이며, 특정 상황에 따라 적합한 도구가 달라진다.
+- 최적의 기술을 선택하고 효과적으로 활용하기 위해서는 다양한 실제 개발 경험이 필수적이다.
